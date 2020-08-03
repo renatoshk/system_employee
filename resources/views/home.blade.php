@@ -8,7 +8,7 @@
                     <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" data-target="#messages" data-toggle="tab" class="nav-link">Messages</a>
+                    <a href="/chats" class="nav-link">Messages</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('profile', Auth::user()->id)}}"  class="nav-link">Edit</a>

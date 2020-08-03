@@ -36,3 +36,6 @@ Route::get('/profile/{id}', 'ProfileController@updateprofile')->name('profile');
 Route::patch('/profile', 'ProfileController@update');
 Route::get('/changepassword', 'ProfileController@change')->name('password');
 Route::patch('/password', 'ProfileController@changepassword');
+Route::get('/chats', 'ChatsController@index');
+Route::get('/messages', 'ChatsController@fetchMessages');
+Route::post('/messages', 'ChatsController@sendMessages');
