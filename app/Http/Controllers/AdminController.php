@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Dep;
+use App\Primary_dep;
 class AdminController extends Controller
 {
     /**
@@ -14,7 +16,11 @@ class AdminController extends Controller
     public function index()
     {
         //
-        return view('admin.dashboard');
+        $deps  = Dep::all();
+        $primary_deps = Primary_dep::all();
+        $users  = User::where('role_id',2)->get();
+        $admins  = User::where('role_id',1)->get();
+        return view('admin.dashboard', compact('deps', 'primary_deps', 'users', 'admins'));
     }
 
     /**
